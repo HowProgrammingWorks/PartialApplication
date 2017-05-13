@@ -4,12 +4,15 @@ const sum3 = function(a, b, c) {
   return a + b + c;
 };
 
+// const sum3 = (a, b, c) => (a + b + c);
+
 function curry(fn, x) {
   return function(...args) {
-    args.push(x);
-    return fn(...args);
+    return fn(x, ...args);
   };
 }
+
+// const curry = (fn, x) => (...args) => fn(x, ...args);
 
 const f1 = curry(sum3, 10);
 const f2 = curry(f1, 5);
