@@ -6,15 +6,15 @@ const sum3 = function(a, b, c) {
 
 // const sum3 = (a, b, c) => (a + b + c);
 
-function curry(fn, x) {
+function partial(fn, x) {
   return function(...args) {
     return fn(x, ...args);
   };
 }
 
-// const curry = (fn, x) => (...args) => fn(x, ...args);
+// const partial = (fn, x) => (...args) => fn(x, ...args);
 
-const f1 = curry(sum3, 10);
-const f2 = curry(f1, 5);
+const f1 = partial(sum3, 10);
+const f2 = partial(f1, 5);
 const y = f2(1);
 console.log(y);
