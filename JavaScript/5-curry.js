@@ -12,5 +12,8 @@ const curry = (fn) => (...args) => {
 };
 
 const f = curry(sum3);
-const y = f(1)(2)(3);
-console.log(y);
+const y1 = f(1, 2, 3);
+const y2 = f(1, 2)(3);
+const y3 = f(1)(2, 3);
+const y4 = f(1)(2)(3);
+console.log(y1, y2, y3, y4);
