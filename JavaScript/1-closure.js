@@ -16,3 +16,5 @@ function createLog(base) {
 
 const lg = createLog(10);
 const ln = createLog(Math.E);
+
+// const lg = n => log(10, n);
