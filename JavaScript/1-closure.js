@@ -18,3 +18,6 @@ const lg = createLog(10);
 const ln = createLog(Math.E);
 
 // const lg = n => log(10, n);
+
+console.log('lg(5) = ' + lg(5));
+console.log('ln(5) = ' + ln(5));

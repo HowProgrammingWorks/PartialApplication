@@ -4,7 +4,9 @@ const sum3 = (a, b, c) => (a + b + c);
 
 const curry = (fn, ...par) => {
   const curried = (...args) => (
-    fn.length > args.length ? curry(fn.bind(null, ...args)) : fn(...args)
+    fn.length > args.length ?
+      curry(fn.bind(null, ...args)) :
+      fn(...args)
   );
   return par.length ? curried(...par) : curried;
 };
