@@ -1,6 +1,6 @@
 'use strict';
 
-const partial = (fn, x) => (...args) => fn(x, ...args);
+const partial = (fn, ...args) => (...rest) => fn(...args.concat(rest));
 
 // Usage
 
