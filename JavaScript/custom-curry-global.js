@@ -1,11 +1,14 @@
 'use strict';
-const customCurry = (func, required, params = {}) => (obj) => {
+const customCurry = (func, required, params = {}) => obj => {
   Object.assign(params, obj);
-  let full = true;
-  required.forEach((element) => {
-    if (params[element] === undefined) full = false;
-  });
-  if (full) return func(params);
+  let ready = true;
+  for (const i of required) {
+    if (params[i] === undefined) {
+      ready = false;
+      break;
+    }
+  }
+  if (ready) return func(params);
   return customCurry(func, required, params);
 };
 //usage
