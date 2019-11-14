@@ -1,0 +1,18 @@
+({
+  name: 'press',
+  length: [50, 200],
+  test: press => {
+    {
+      const res = press('1').press('2').press('3').press('4');
+      if (res) {
+        throw new Error(`Expected false when entered wrong pin code.`);
+      }
+    }
+    {
+      const res = press('4').press('9').press('6').press('7');
+      if (!res) {
+        throw new Error(`Expected true when entered correct pin code.`);
+      }
+    }
+  }
+})
