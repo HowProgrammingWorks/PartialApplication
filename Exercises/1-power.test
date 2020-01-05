@@ -1,0 +1,38 @@
+[{
+  name: 'power',
+  length: [32, 32],
+  cases: [
+    [0, 0, 1],
+    [1, 1, 1],
+    [1, 2, 1],
+    [2, 1, 2],
+    [2, 2, 4],
+    [3, 1, 3],
+    [3, 2, 9],
+    [3, 3, 27],
+    [1, -1, 1],
+    [1, -2, 1],
+    [2, -1, 0.5],
+    [2, -2, 0.25],
+  ],
+  test: power => {
+    const src = power.toString();
+    if (src !== 'function pow() { [native code] }') {
+      throw new Error('Function power expected to be reference to Math.pow');
+    }
+  }
+}, {
+  name: 'square',
+  length: [10, 25],
+  cases: [
+  ]
+}, {
+  name: 'cube',
+  length: [29, 29],
+  test: cube => {
+    const src = cube.toString();
+    if (src !== 'function () { [native code] }') {
+      throw new Error('Function cube expected to be binded Math.pow');
+    }
+  }
+}]
