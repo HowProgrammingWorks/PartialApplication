@@ -1,7 +1,7 @@
 'use strict';
 
 const coffee = (volume, strength) =>
-  (`Coffee volume: ${volume}ml, strength: ${strength}`);
+  `Coffee volume: ${volume}ml, strength: ${strength}`;
 
 const defineCoffeeType = volume => strength => coffee(volume, strength);
 
@@ -11,15 +11,5 @@ const defineCoffeeType = volume => strength => coffee(volume, strength);
 
 const espresso = null;
 const americano = null;
-
-// Set names for anonymous functions (for tests).
-if (typeof espresso === 'function') {
-  Object.defineProperty(espresso, 'name',
-    { value: 'espresso', configurable: true });
-}
-if (typeof americano === 'function') {
-  Object.defineProperty(americano, 'name',
-    { value: 'americano', configurable: true });
-}
 
 module.exports = { espresso, americano };

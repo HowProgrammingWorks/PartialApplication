@@ -2,7 +2,7 @@
 
 // Check 4 digit pin.
 const checkPin = (ch1, ch2, ch3, ch4) =>
-  ([ch1, ch2, ch3, ch4].join('') === '4967');
+  [ch1, ch2, ch3, ch4].join('') === '4967';
 
 // Impement function press
 // that allows to enter pin code by one character,

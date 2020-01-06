@@ -22,14 +22,4 @@ const H = (exp, ...args) => {
 const average = null;
 const rootMeanSquare = null;
 
-// Set names for anonymous functions (for tests).
-if (typeof average === 'function') {
-  Object.defineProperty(average, 'name',
-    { value: 'average', configurable: true });
-}
-if (typeof rootMeanSquare === 'function') {
-  Object.defineProperty(rootMeanSquare, 'name',
-    { value: 'rootMeanSquare', configurable: true });
-}
-
 module.exports = { average, rootMeanSquare };

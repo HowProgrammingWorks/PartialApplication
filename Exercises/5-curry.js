@@ -2,7 +2,7 @@
 
 // Check 4 digit pin.
 const checkPin = (...code) =>
-  (code.join('') === '4967');
+  code.join('') === '4967';
 
 // Define function curry that accepts the length of the function
 // (amount of function arguments) and the function.
@@ -12,10 +12,5 @@ const curry = (length, fn) => (...args) => null;
 // Allows to enter pin code by one character,
 // Usage: press('3')('4')('5')('6')
 const press = curry(4, checkPin);
-
-// Set name for anonymous function (for tests).
-if (typeof press === 'function') {
-  Object.defineProperty(press, 'name', { value: 'press', configurable: true });
-}
 
 module.exports = { press };

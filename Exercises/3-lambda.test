@@ -3,11 +3,8 @@
   length: [150, 400],
   test: tagDate => {
     {
-      const today = new Date();
-      const dd = String(today.getDate()).padStart(2, '0');
-      const mm = String(today.getMonth() + 1).padStart(2, '0');
-      const yyyy = today.getFullYear();
-      const expected = `[${yyyy}-${mm}-${dd}] Test`;
+      const date = new Date().toISOString().substring(0, 10);
+      const expected = `[${date}] Test`;
       const y = tagDate('Test');
       if (y !== expected) {
         throw new Error(`tagDate('Test') === ${y} expected: ${expected}`);
