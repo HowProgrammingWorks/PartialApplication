@@ -1,8 +1,8 @@
 'use strict';
 
 // Check 4 digit pin.
-const checkPin = (ch1, ch2, ch3, ch4) =>
-  [ch1, ch2, ch3, ch4].join('') === '4967';
+const EXPECTED_PIN = '4967';
+const checkPin = (...code) => code.join('') === EXPECTED_PIN;
 
 // Impement function press
 // that allows to enter pin code by one character,

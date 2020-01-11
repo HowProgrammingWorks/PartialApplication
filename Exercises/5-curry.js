@@ -1,8 +1,8 @@
 'use strict';
 
 // Check 4 digit pin.
-const checkPin = (...code) =>
-  code.join('') === '4967';
+const EXPECTED_PIN = '4967';
+const checkPin = (...code) => code.join('') === EXPECTED_PIN;
 
 // Define function curry that accepts the length of the function
 // (amount of function arguments) and the function.
