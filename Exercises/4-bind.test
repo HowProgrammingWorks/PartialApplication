@@ -1,0 +1,16 @@
+([{
+  name: 'rootMeanSquare',
+  length: [10, 70],
+  cases: [
+    [7, 1, 5],
+    [4, 4, 4, 4],
+  ]
+},
+{
+  name: 'average',
+  length: [10, 70],
+  cases: [
+    [3, 4, 6, 7, 5],
+    [4, 4, 4, 4],
+  ]
+}])

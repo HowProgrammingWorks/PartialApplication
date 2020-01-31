@@ -1,0 +1,16 @@
+[{
+  name: 'espresso',
+  length: [30, 70],
+  cases: [
+    ['medium', 'Coffee volume: 50ml, strength: medium'],
+    ['strong', 'Coffee volume: 50ml, strength: strong'],
+  ]
+},
+{
+  name: 'americano',
+  length: [30, 70],
+  cases: [
+    ['medium', 'Coffee volume: 150ml, strength: medium'],
+    ['strong', 'Coffee volume: 150ml, strength: strong'],
+  ]
+}]
