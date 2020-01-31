@@ -1,0 +1,18 @@
+({
+  name: 'tagDate',
+  length: [150, 400],
+  test: tagDate => {
+    {
+      const date = new Date().toISOString().substring(0, 10);
+      const expected = `[${date}] Test`;
+      const y = tagDate('Test');
+      if (y !== expected) {
+        throw new Error(`tagDate('Test') === ${y} expected: ${expected}`);
+      }
+    }
+    {
+      const src = tagDate.toString();
+      if (!src.includes('tagged(')) throw new Error('Use function tagged to implement tagDate');
+    }
+  }
+})
