@@ -25,14 +25,22 @@
   name: 'square',
   length: [10, 25],
   cases: [
+    [5, 25],
+    [6, 36],
+    [9, 81],
   ]
 }, {
-  name: 'cube',
+  name: 'powerOfThree',
   length: [29, 29],
-  test: cube => {
-    const src = cube.toString();
+  test: powerOfThree => {
+    const src = powerOfThree.toString();
     if (src !== 'function () { [native code] }') {
-      throw new Error('Function cube expected to be binded Math.pow');
+      throw new Error('Function powerOfThree expected to be binded Math.pow');
     }
-  }
+  },
+  cases: [
+    [2, 9],
+    [3, 27],
+    [4, 81],
+  ]
 }]
