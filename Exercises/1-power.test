@@ -25,6 +25,9 @@
   name: 'square',
   length: [10, 25],
   cases: [
+    [5, 25],
+    [6, 36],
+    [9, 81],
   ]
 }, {
   name: 'cube',
@@ -34,5 +37,10 @@
     if (src !== 'function () { [native code] }') {
       throw new Error('Function cube expected to be binded Math.pow');
     }
-  }
+  },
+  cases: [
+    [2, 9],
+    [3, 27],
+    [4, 81],
+  ]
 }]
