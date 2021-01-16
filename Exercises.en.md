@@ -6,7 +6,7 @@ You can often use more general functions to define more specific functions.
 
 - Define function `power()` which is an alias to `Math.pow()`.
 - Implement function `square()` which returns a number to the power of two.
-- `bind()` function `power(base, power)` to obtain function `cube(n)`.
+- `bind()` function `power(base, power)` to obtain function, that returns 3^n.
 
 ## Use closure
 
