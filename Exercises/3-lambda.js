@@ -2,10 +2,15 @@
 
 const tagged = (pref, str) => `[${pref}] ${str}`;
 
-// Define function tagDate that prepends current date to the string.
-// E.g. tagDate('My String') === '[2019-11-14] My String'
-// Use function tagged to implement tagDate.
-
-const tagDate = null;
+const tagDate = str => {
+  const date = new Date();
+  let month = '' + (date.getMonth() + 1);
+  let day = '' + date.getDate();
+  const year = date.getFullYear();
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+  const cdate = [year, month, day].join('-');
+  return tagged(cdate, str);
+};
 
 module.exports = { tagDate };
