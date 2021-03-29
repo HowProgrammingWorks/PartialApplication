@@ -4,9 +4,10 @@
 
 You can often use more general functions to define more specific functions.
 
-- Define function `power()` which is an alias to `Math.pow()`.
-- Implement function `square()` which returns a number to the power of two.
-- `bind()` function `power(base, power)` to obtain function `cube(n)`.
+- Define function `power(exp, n)`, the same as `Math.pow(n, exp)` but with
+reverse order of argumants.
+- Implement function `square(n)` which returns a number to the power of two.
+- `bind()` function `power(exp, n)` to obtain function `cube(n)`.
 
 ## Use closure
 
