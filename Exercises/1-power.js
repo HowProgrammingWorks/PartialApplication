@@ -1,6 +1,7 @@
 'use strict';
 
-// Define function power - an alias to Math.pow().
+// Define function power(exp, n), the same as Math.pow(n, exp)
+// but with reverse order of argumants.
 const power = null;
 
 // Implement function `square(n)`, which returns square of its argument.
@@ -8,7 +9,7 @@ const power = null;
 const square = null;
 
 // Implement function `cube(n)` using partial application
-// The function should return power of three for the given argument.
+// The function should return cube of argumant (to the power of three).
 const cube = null;
 
 module.exports = { power, square, cube };
