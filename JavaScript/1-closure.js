@@ -3,7 +3,7 @@
 const { log: ln } = Math;
 const log = (base, n) => ln(n) / ln(base);
 
-const createLog = base => n => log(base, n);
+const createLog = (base) => (n) => log(base, n);
 
 // Usage
 {
