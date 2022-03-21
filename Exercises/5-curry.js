@@ -7,7 +7,14 @@ const checkPin = (...code) => code.join('') === EXPECTED_PIN;
 // Define function curry that accepts the length of the function
 // (amount of function arguments) and the function.
 
-const curry = (length, fn) => (...args) => null;
+const curry = (length, fn) => (char) => {
+  if (length > 1) {
+    const f = fn.bind(null, char);
+    return curry(length - 1, f);
+  } else {
+    return fn(char);
+  }
+};
 
 // Allows to enter pin code by one character,
 // Usage: press('3')('4')('5')('6')
