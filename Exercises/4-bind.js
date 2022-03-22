@@ -19,7 +19,7 @@ const H = (exp, ...args) => {
 // Create function `average` that returns arithmetic mean (H₁) of the arguments.
 // Create function `rootMeanSquare` that returns quadratic mean (H₂).
 
-const average = null;
-const rootMeanSquare = null;
+const average = H.bind(null, 1);
+const rootMeanSquare = H.bind(null, 2);
 
 module.exports = { average, rootMeanSquare };
