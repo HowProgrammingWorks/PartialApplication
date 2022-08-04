@@ -9,17 +9,17 @@
   Hk = ᵏ√ (a₁ᵏ + a₂ᵏ + ... + anᵏ) / n
 */
 
-const H = (exp, ...args) => {
-  const sum = args.reduce((s, a) => (s + Math.pow(a, exp)), 0);
+const H = (...args) => {
+  const sum = args.reduce((s, a) => (s + Math.pow(a, args[0])), 0);
   const avg = sum / args.length;
-  return Math.pow(avg, (1 / exp));
+  return +(Math.pow(avg, (1 / args[0])).toFixed());
 };
 
 // Use method bind() to create new functions from function H.
 // Create function `average` that returns arithmetic mean (H₁) of the arguments.
 // Create function `rootMeanSquare` that returns quadratic mean (H₂).
 
-const average = null;
-const rootMeanSquare = null;
+const average = H.bind(this, 3);
+const rootMeanSquare = H.bind(this, 3);
 
 module.exports = { average, rootMeanSquare };

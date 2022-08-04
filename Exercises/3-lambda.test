@@ -1,6 +1,6 @@
 ({
   name: 'tagDate',
-  length: [150, 400],
+  length: [30, 400],
   test: tagDate => {
     {
       const date = new Date().toISOString().substring(0, 10);
