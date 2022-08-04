@@ -23,7 +23,7 @@
   }
 }, {
   name: 'square',
-  length: [16, 25],
+  length: [16, 30],
   cases: [
     [5, 25],
     [6, 36],
