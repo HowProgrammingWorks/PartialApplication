@@ -4,12 +4,15 @@
 const EXPECTED_PIN = '4967';
 const checkPin = (...code) => code.join('') === EXPECTED_PIN;
 
-// Implement function press
-// that allows to enter pin code by one character,
-// e.g. press('3').press('4').press('5').press('6')
-//
-// For hint use https://github.com/HowProgrammingWorks/Cheatsheet
-
-const press = null;
+const press = (n) => {
+  const data = [n];
+  Object.defineProperty(data, 'press', {
+    value(n) {
+      data.push(n);
+      return data.length === 4 ? checkPin(...data) : data;
+    }
+  });
+  return data;
+};
 
 module.exports = { press };
