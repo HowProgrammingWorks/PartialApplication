@@ -22,4 +22,5 @@ const y5 = f(1)(2)(3)(4);
 const y6 = f(1)(2, 3, 4);
 const y7 = f(1)(2)(3, 4);
 const y8 = f(1, 2)(3, 4);
-console.log(y1, y2, y3, y4, y5, y6, y7, y8);
+const y9 = curry(sum4, 1, 2, 3, 4);
+console.log(y1, y2, y3, y4, y5, y6, y7, y8, y9);
