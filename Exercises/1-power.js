@@ -10,6 +10,6 @@ const square = (n) => power(2, n);
 
 // Implement function `cube(n)` using partial application
 // The function should return cube of argument (to the power of three).
-const cube = (n) => power.bind(null, 3)(n);
+const cube = power.bind(null, 3);
 
 module.exports = { power, square, cube };
