@@ -10,16 +10,16 @@
 */
 
 const H = (exp, ...args) => {
-  const sum = args.reduce((s, a) => (s + Math.pow(a, exp)), 0);
+  const sum = args.reduce((s, a) => s + Math.pow(a, exp), 0);
   const avg = sum / args.length;
-  return Math.pow(avg, (1 / exp));
+  return Math.pow(avg, 1 / exp);
 };
 
 // Use method bind() to create new functions from function H.
 // Create function `average` that returns arithmetic mean (H₁) of the arguments.
 // Create function `rootMeanSquare` that returns quadratic mean (H₂).
 
-const average = null;
-const rootMeanSquare = null;
+const average = H.bind(null, 1);
+const rootMeanSquare = H.bind(null, 2);
 
 module.exports = { average, rootMeanSquare };
